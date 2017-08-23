@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Artículos Promocionales, Impresión Digital, Sublimación, Serigrafia, Bordado, Confección</title>
+
+	<meta name="viewport" content="width-device-width, initial-scale=1, maximum-scale=1">
+
+	<meta name="keywords" content="Artículos Promocionales, 3 nada mas">
+
+	<meta name="description" content="Diseño profesional">
+
+	<meta name="owner" content="MAS PUBLICIDAD">
+
+	<meta name="author" content="Christian Sandino- NS WORLD">
+
+	<meta name="robots" content="index, follow">
+	
+	<script src="js/modernizr-custom.js"></script>
+	
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/design.css">
+	<link rel="stylesheet" type="css/icomoon.css" href="">
+	<link rel="shortcut icon" href="iconos/favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+	<header>
+		<h1>
+			<a href="index.html">
+				<figure><img src="img/logo.png" alt=""></figure></a>
+				<a href="index.html">MAS PUBLICIDAD</a>
+		</h1>
+		<nav id="iomenu">
+					<figure id="showmenu" class="oimenumovil" onclick="displaymenu()"><img src="img/menu.png" alt=""></figure>
+				<div id="Cardmenu">
+					<figure id="hidemenu" class="oimenumovil" onclick="displaymenu()"><img src="img/salir.png" alt=""></figure>
+					<figure id="logomenu"><img src="img/mas.png" alt=""></figure>
+
+				<ul>
+					<li><a onclick = "navsection('Inicio')" href="#">Inicio</a></li>
+					<li><a onclick = "navsection('Nosotros')" href="#">Nosotros</a></li>
+					<li><a onclick = "navsection('Catálogo')" href="#">Catálogo</a></li>
+					<li><a onclick = "navsection('Cliente')" href="#">Cliente</a></li>
+					<li><a onclick="displayformcontact('block')" href="#">Contacto</a></li>
+				</ul>
+				</div>
+		</nav>
+		<div id="prevsection" onclick="displaysection('prev')"><img src="img/show.png" alt=""></div>
+		<div id="nextsection" onclick="displaysection('next')"><img src="img/show.png" alt=""></div>
+	</header>
+	
+	<div id="slider">
+			<section class="slide" id="Inicio" style="display:block">
+				<div id="slideer">
+					<figure>
+					<img src="img/11.jpg" alt>
+					<img src="img/16.jpg" alt>
+					<img src="img/17.jpg" alt>
+					<img src="img/11.jpg" alt>
+					<img src="img/16.jpg" alt>
+					</figure>
+				</div>
+
+				<div class="mainlogo">
+					<h2>Somos una <strong>AGENCIA PUBLICITARIA</strong></h2>
+					
+					<div class="buttonspage"></div>
+						<div id="contratame" onclick="displayformcontact('block')">COTIZANOS</div>
+						<a href="docs/catalogo.pdf" target="_blank">CATÁLOGO</a>
+
+				</div>
+				
+
+
+			</section>
+			<section class="slide" id="Nosotros" style="display:none"></section>
+			<section class="slide" id="Catálogo" style="display:none"></section>
+			<section class="slide" id="Cliente" style="display:none"></section>
+	</div>
+
+	<div id="contact_form">
+		<form action="contact.php" id="form1" name= "form1" method="post">
+		<div id="close_form" onclick="displayformcontact('none')">
+			<figure id="logo_mensaje"><img src="img/mensaje.png"></figure>
+		</div>
+			<p>Dí Hola</p>
+
+			<input type="text" id="name" name="name" placeholder="Tu Nombre" onfocus="if(this.placeholder = '') this.placeholder='Tu Nombre'" />
+
+			<input type="text" id="email" name="email" placeholder="Tu Email" onfocus="if(this.placeholder = '') this.placeholder='Tu Email'" />
+
+			<textarea name="message" id="message" placeholder="Tu Mensaje" onfocus="if(this.placeholder = '') this.placeholder='Tu Mensaje'" /></textarea>
+
+			<input type="submit" name="Submit" id="button" value="ENVIAR" />
+
+			<div id="Ubicacion">
+				<figure id="logoubicacion"><img src="img/ubicacion.png"></figure>
+			<p>Enel Central 2c al Norte</p>
+			<p>2277-5313</p>
+
+			</div>
+			
+		</form>
+	</div>
+
+	<div id="contact_button" onclick="displayformcontact('block')"></div>
+
+	<footer>
+			<div class="stock">
+				<div class="promo">
+					<a href="#">Térmicos</a>
+					<a href="#">Pachones</a>
+					<a href="#">Lapiceros</a>
+					<a href="#">Libretas</a>
+					<a href="#">llaveros</a>
+					<a href="#">belleza</a>
+					<a href="#">bolsos</a>
+					<a href="#">locheras</a>
+					<a href="#">herramientas</a>
+					<a href="#">tecnologia</a>
+					<a href="#">varios</a>
+					
+				<div class="servicios">
+						<a href="#">Sublimación</a>
+						<a href="#">Serigrafia</a>
+						<a href="#">Bordado</a>
+						<a href="#">Confección</a>
+						<a href="#">Impresión Digital</a>
+				</div>
+			</div>
+				
+		</div>
+
+		<div class="rrss">
+				<a href="https://www.facebook.com/MAS-Publicidad-Nicaragua-266861966750238" target="_blank"></a>
+				<a href="#"></a>
+				<a href="#"></a>
+				<a href="#"></a>
+				<a href="#"></a>
+			</div>
+
+				
+
+			<p>© 2017 Derechos Reservados || MAS PUBLICIDAD</p>
+
+	</footer>
+
+
+
+	
+	<script>
+		var sections = new Array(4);
+			sections[0] = "Inicio";
+			sections[1] = "Nosotros";
+			sections[2] = "Catálogo";
+			sections[3] = "Cliente";
+
+		alertSize();
+		function alertSize() { 
+		  var myWidth = 0, myHeight = 0; 
+		  if( typeof( window.innerWidth ) == 'number' ) { 
+		    //No-IE 
+		    myWidth = window.innerWidth; 
+		    myHeight = window.innerHeight; 
+		  } else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) {
+		    //IE 6+ 
+		    myWidth = document.documentElement.clientWidth; 
+		    myHeight = document.documentElement.clientHeight; 
+		  } else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+		    //IE 4 compatible 
+		    myWidth = document.body.clientWidth; 
+		    myHeight = document.body.clientHeight; 
+		  } 
+
+		  var display;
+		  var Cardmenu = document.getElementById("Cardmenu");
+		  display = Cardmenu.style.display;
+
+		  if(myWidth < 767){
+		  	Cardmenu.style.display = "none";
+		  }
+		  else{
+		  	Cardmenu.style.display = "block";
+		  }
+		} 
+
+		
+		function displaymenu(){
+			var display;
+			var Cardmenu = document.getElementById("Cardmenu");
+			display = Cardmenu.style.display;
+			
+			if (display == "none"){
+				Cardmenu.style.display = "block"
+			}
+
+			else{
+				Cardmenu.style.display = "none";
+			}
+		}
+
+		function setcolors(i){
+			var search;
+			var bkgr_body;
+			var bkgr_menu;
+			if(sections[i] == "Inicio"){
+					bkgr_body = "#233D58";
+					bkgr_menu = "#233D58";
+				}
+
+				else{
+					bkgr_body = "#f1f1f1";
+					bkgr_menu = "black";
+				}
+				search = document.getElementById(sections[i]);
+				search.style.background = bkgr_body;
+				var menu = document.getElementsByTagName("header")[0];
+				menu.style.background = bkgr_menu;
+		}
+
+		function navsection(nav){
+			var search;
+			var show;
+			
+			for(var i=0; i<4; i++){
+				search = document.getElementById(sections[i]);
+				search.style.display = "none";
+
+				if(sections[i] == nav){
+					search.style.display = "block";
+					setcolors(i);
+
+				}
+			}
+
+		}
+		function displaysection(nav){
+			var search;
+			var show;
+
+			for (var i=0; i<4; i++){
+				search = document.getElementById(sections[i]);
+				show = search.style.display;
+
+				if(show =="block"){
+					search.style.display = "none";
+						if(nav == "next"){
+							i++;
+								if (i>3) i=0;
+						}
+						if (nav=="prev"){
+							i--;
+							if (i<0) i=3;
+						}
+					search = document.getElementById(sections[i]);
+					search.style.display = "block";
+					break;
+				}
+			}
+			setcolors(i);
+		}
+		function displayformcontact(status){
+			var form = document.getElementById("contact_form");
+			form.style.display=status;
+		}
+
+		
+	</script>
+
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-104101043-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>
